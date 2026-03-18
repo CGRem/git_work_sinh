@@ -1,12 +1,12 @@
-//проверка кириллицы
+﻿//проверка кириллицы
 #include <iostream>
 #include <cstdlib> // для system
-#include <string>
+//#include <string>
 using namespace std;
 int main()
 {
     setlocale(LC_ALL, "");
-    cout << "Привет, мир" << endl;
+    cout << "Привет мир" << endl;
     system("pause");
     return 0;
 }
