@@ -2,6 +2,7 @@
 #include <ctime>
 #include <iostream>
 #include <cstdlib> // для system
+#include "function.h"
 //#include <string>
 using namespace std;
 int main()
@@ -11,6 +12,7 @@ int main()
     cout << "Привет мир" << endl;
     int rand_int = rand();
     cout << rand_int << endl;
+    cout << func_r() << endl;
     //system("pause");
     return 0;
 }
