@@ -13,7 +13,7 @@ int main(int argc, char* argv[])
 
     std::random_device rd;  // Источник энтропии
     std::mt19937 gen(rd()); // Mersenne Twister, seed из random_device (вихрь Мерсенна)
-    std::uniform_int_distribution<> distrib(10, 15);
+    std::uniform_int_distribution<> distrib(2, 50);
     /*for (int n = 0; n < 100; ++n) { std::cout << distrib(gen) << std::endl; };*/
 
 
