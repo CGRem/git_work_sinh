@@ -13,16 +13,22 @@ int main(int argc, char* argv[])
 
     std::random_device rd;  // Источник энтропии
     std::mt19937 gen(rd()); // Mersenne Twister, seed из random_device (вихрь Мерсенна)
-    std::uniform_int_distribution<> distrib(2, 50);
+    std::uniform_int_distribution<> distrib(0, 99);
     /*for (int n = 0; n < 100; ++n) { std::cout << distrib(gen) << std::endl; };*/
 
 
     //for (int n = 0; n < 100; ++n) { cout << "*"; };
 
-    int diagram[100];
-    for (short num_masive = 0; num_masive < 100; num_masive++) {
+    int diagram[100]{ 0 };
+    /*for (short num_masive = 0; num_masive < 100; num_masive++) {
             diagram[num_masive] = distrib(gen);
+    }*/
+    for (int num_massive = 0; num_massive < 5000; num_massive++) {
+        int index_r = distrib(gen);
+        diagram[index_r]++;
     }
+
+
     console_diagr_mass(diagram);
     //cout << console_diagr_mass(diagram) << endl;
     system("pause");
